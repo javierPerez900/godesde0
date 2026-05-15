@@ -3,12 +3,13 @@ package ejercicios
 import "strconv"
 
 func DevuelveValores(cadena string) (int, string) {
-	var mensaje string
-	entero, _ := strconv.Atoi(cadena)
-	if entero > 100 {
-		mensaje = "Es mayor que 100"
-	} else {
-		mensaje = "Es menor  100"
+	entero, err := strconv.Atoi(cadena)
+	if err != nil {
+		return 0, "Error al convertir la cadena a entero " + err.Error()
 	}
-	return entero, mensaje
+	if entero > 100 {
+		return entero, "Es mayor que 100"
+	} else {
+		return entero, "Es menor  100"
+	}
 }

@@ -28,6 +28,6 @@ func main() {
 	default:
 		fmt.Printf("%s.\n", os)
 	}
-	entero, mensaje := ejercicios.DevuelveValores("199")
+	entero, mensaje := ejercicios.DevuelveValores("200")
 	fmt.Println(entero, mensaje)
 }
